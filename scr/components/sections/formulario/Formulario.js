@@ -1,27 +1,48 @@
+
+import { ContactList } from "../contactos/db.js"
+
 let Formulario = () =>{
-    let sectionFormulario = document.createElement("sections");
+    let sectionFormulario = document.createElement("form");
     sectionFormulario.className = "formulario"
 
     let h2 = document.createElement("h2");
     h2.innerHTML = "Crear Contacto"
 
     let nombre = document.createElement("input");
-    user.type = "text";
-    user.placeholder = "Nombre";
+    nombre.type = "text";
+    nombre.placeholder = "Nombre";
 
     let telefono = document.createElement("input");
-    password.type = "text";
-    password.placeholder = "Teléfono";
+    telefono.type = "text";
+    telefono.placeholder = "Teléfono";
     
     let button = document.createElement("button")
+    button.type = "submit"
     button.innerHTML = "Crear"
+
 
     sectionFormulario.appendChild(h2);
     sectionFormulario.appendChild(nombre);
     sectionFormulario.appendChild(telefono);
     sectionFormulario.appendChild(button);
 
+
+    sectionFormulario.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        let contacto = {
+            nombre: nombre.value,
+            telefono: telefono.value
+        };
+        console.log(contacto);
+        ContactList.push(contacto);
+    })
+
+    let contacto = {
+        nombre: nombre.value,
+        telefono: telefono.value
+    }
+
     return sectionFormulario
 }
-
 export{Formulario};

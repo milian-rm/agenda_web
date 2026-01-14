@@ -9,12 +9,27 @@ let app = document.getElementById("app");
 let nav = document .getElementById("nav");
 
 // Agregar botones
-nav.appendChild(Button("Agenda", "agenda", "users"));
-nav.appendChild(Button("Crear contacto", "plus", "plus"));
+nav.appendChild(Button(
+    "Agenda", 
+    "agenda", 
+    "users",
+    function(){
+        container.innerHTML = "";
+        container.appendChild(Contactos());
+    }
+));
+nav.appendChild(Button(
+    "Crear contacto", 
+    "plus", 
+    "plus",
+    function(){
+        container.innerHTML = "";
+        container.appendChild(Formulario());
+    }
+));
 nav.appendChild(Button("ToDoList", "todolist", "agenda"));
 nav.appendChild(Button("Crear Tarea", "plus","plus"))
 
 // Section Container
 let container = document.getElementById("container");
 container.appendChild(Contactos());
-container.appendChild(Formulario());

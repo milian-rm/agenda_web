@@ -39,7 +39,7 @@ div[id]:active {
     height: 44px;
     border-radius: 12px;
 
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background: linear-gradient(135deg, #F56C6C, #CC0C0C);
     display: flex;
     align-items: center;
     justify-content: center;
