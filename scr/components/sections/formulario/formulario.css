@@ -3,7 +3,6 @@
     margin: 40px auto;
     padding: 20px;
 
-    /* CAMBIO */
     background: linear-gradient(180deg, #151515, #0d0d0d);
     border-radius: 14px;
     border: 1px solid #2a2a2a;
@@ -32,7 +31,6 @@
     padding: 10px;
     font-size: 1rem;
 
-    /* CAMBIO */
     background-color: #111;
     color: #f0f0f0;
     border: 1px solid #333;
@@ -55,7 +53,6 @@
     padding: 10px;
     font-size: 1rem;
 
-    /* CAMBIO */
     background: linear-gradient(135deg, #8b0000, #c62828);
     color: white;
     border: 1px solid #ff5252;

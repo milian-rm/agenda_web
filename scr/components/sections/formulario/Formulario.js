@@ -1,5 +1,6 @@
 
 import { ContactList } from "../contactos/db.js"
+import { saveContactsToStorage } from "../storage/storage.js";
 
 let Formulario = () =>{
     let sectionFormulario = document.createElement("form");
@@ -36,6 +37,7 @@ let Formulario = () =>{
         };
         console.log(contacto);
         ContactList.push(contacto);
+        saveContactsToStorage(ContactList);
     })
 
     let contacto = {
