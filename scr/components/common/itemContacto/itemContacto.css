@@ -1,14 +1,50 @@
+/* =========================
+   REGISTRO CONTACTO
+========================= */
 .item_seleccionado {
-    font-family: monospace;
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding: 18px 20px;
+
+    border-bottom: 1px solid #2a2a2a;
+    cursor: pointer;
+
+    transition: background-color 0.25s ease;
+}
+
+/* Hover */
+.item_seleccionado:hover {
+    background-color: rgba(193, 18, 31, 0.12);
+}
+
+/* Icono izquierda */
+.item_seleccionado img {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+
+    filter: brightness(0) invert(1);
+}
+
+/* Texto derecha */
+.item_seleccionado h3,
+.item_seleccionado p {
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Nombre */
+.item_seleccionado h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+/* Teléfono */
+.item_seleccionado p {
     font-size: 1rem;
-
-    border: 2px solid #ccc;
-    border-radius: 2rem;
-
-    margin-left: 1rem;
-    width: 95%;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 1rem;
-    padding: 1.5rem;
+    opacity: 0.85;
+    margin-left: auto;
 }

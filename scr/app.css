@@ -1,8 +1,12 @@
 *{
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
 
 #app{
     width: 100vw;
@@ -12,12 +16,45 @@
     gap: 8px;
 }
 
-#nav{
-    height: 100vh;
-    border: 1px solid #000;
+
+#nav {
+    width: 100%;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    background: linear-gradient(180deg, #120000, #0a0a0a);
+    border-bottom: 1px solid #2a2a2a;
 }
 
-#container {
-    height: 100vh;
-    border: 1px solid #000;
+/* ====== BOTONES DEL MENÚ ====== */
+#nav > div {
+    width: 100%;
 }
+
+/* ====== CONTAINER PRINCIPAL ====== */
+#container {
+    flex: 1;
+    width: 100%;
+    padding: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    background: radial-gradient(
+        circle at top,
+        #1b0000 0%,
+        #0f0f0f 45%,
+        #0a0a0a 100%
+    );
+}
+
+/* ====== TRANSICIÓN AL CAMBIAR SECCIÓN ====== */
+#container > * {
+    animation: fadeSection 0.25s ease-in-out;
+}
+
+

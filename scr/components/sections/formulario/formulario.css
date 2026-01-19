@@ -2,55 +2,81 @@
     width: 320px;
     margin: 40px auto;
     padding: 20px;
-    background-color: white;
-    border-radius: 8px;
- 
+
+    /* CAMBIO */
+    background: linear-gradient(180deg, #151515, #0d0d0d);
+    border-radius: 14px;
+    border: 1px solid #2a2a2a;
+
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 95%;
+    width: 45%;
 }
- 
+
+/* ====== TÍTULO ====== */
 .formulario h2 {
     margin: 0;
     text-align: center;
     font-size: 1.4rem;
-    color: #333;
+
+    /* CAMBIO */
+    color: #ff4d4d;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 6px rgba(255, 77, 77, 0.35);
 }
- 
+
+/* ====== INPUTS ====== */
 .formulario input {
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+    /* CAMBIO */
+    background-color: #111;
+    color: #f0f0f0;
+    border: 1px solid #333;
+    border-radius: 8px;
     outline: none;
 }
- 
-.formulario input:focus {
-    border-color: #007bff;
+
+.formulario input::placeholder {
+    color: #777;
 }
- 
+
+/* ====== FOCUS ====== */
+.formulario input:focus {
+    border-color: #ff5252;
+    box-shadow: 0 0 0 1px rgba(255, 82, 82, 0.4);
+}
+
+/* ====== BOTÓN ====== */
 .formulario button {
     padding: 10px;
     font-size: 1rem;
-    background: linear-gradient(135deg, #F56C6C, #CC0C0C);
+
+    /* CAMBIO */
+    background: linear-gradient(135deg, #8b0000, #c62828);
     color: white;
-    border: none;
+    border: 1px solid #ff5252;
     border-radius: 16px;
+
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     width: 50%;
     display: flex;
     margin-left: 25%;
-
+    justify-content: center;
 }
- 
+
+/* ====== HOVER ====== */
 .formulario button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 0 16px rgba(198, 40, 40, 0.7);
 }
- 
+
+/* ====== ACTIVE ====== */
 .formulario button:active {
-    transform: translateY(2px);  /* Empuja el botón hacia abajo */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  /* Sombra más sutil */
+    transform: translateY(1px);
+    box-shadow: 0 0 6px rgba(198, 40, 40, 0.9);
 }
