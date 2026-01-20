@@ -1,5 +1,5 @@
 
-import { ContactList } from "../contactos/db.js"
+import { ContactList } from "../storage/db.js"
 import { saveContactsToStorage } from "../storage/storage.js";
 
 let Formulario = () =>{

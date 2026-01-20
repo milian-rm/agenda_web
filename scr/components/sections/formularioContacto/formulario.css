@@ -77,3 +77,28 @@
     transform: translateY(1px);
     box-shadow: 0 0 6px rgba(198, 40, 40, 0.9);
 }
+
+/* =========================
+   FORMULARIO TAREA
+========================= */
+
+/* TEXTAREA */
+.formulario textarea {
+    padding: 10px;
+    font-size: 1rem;
+
+    background-color: #111;
+    color: #f0f0f0;
+    border: 1px solid #333;
+    border-radius: 8px;
+    outline: none;
+
+    resize: none;
+    min-height: 80px;
+}
+
+.formulario textarea::placeholder {
+    color: #777;
+}
+
+

@@ -1,0 +1,15 @@
+.tareas {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.tareas h2 {
+    color: #c1121f;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}

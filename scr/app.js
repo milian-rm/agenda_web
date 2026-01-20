@@ -1,6 +1,8 @@
 import { Button } from "./components/common/button/button.js";
 import { Contactos } from "./components/sections/contactos/Contactos.js";
-import { Formulario } from "./components/sections/formulario/Formulario.js";
+import { Formulario } from "./components/sections/formularioContacto/Formulario.js";
+import { Tareas } from "./components/sections/tareas/Tareas.js";
+import { FormularioTarea } from "./components/sections/formularioTarea/FormularioTarea.js";
 
 // App
 let app = document.getElementById("app");
@@ -27,8 +29,25 @@ nav.appendChild(Button(
         container.appendChild(Formulario());
     }
 ));
-nav.appendChild(Button("ToDoList", "todolist", "agenda"));
-nav.appendChild(Button("Crear Tarea", "plus","plus"))
+nav.appendChild(Button(
+    "ToDoList",
+    "todolist",
+    "agenda",
+    function () {
+        container.innerHTML = "";
+        container.appendChild(Tareas());
+    }
+));
+
+nav.appendChild(Button(
+    "Crear Tarea",
+    "plus",
+    "plus",
+    function () {
+        container.innerHTML = "";
+        container.appendChild(FormularioTarea());
+    }
+));
 
 // Section Container
 let container = document.getElementById("container");

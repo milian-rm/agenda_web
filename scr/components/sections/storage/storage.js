@@ -1,25 +1,42 @@
-/**
-* Clave utilizada para almacenar los datos en el LocalStorage
-* Se ha modificado para almacenar contactos de una agenda telefónica
-*/
-const LOCAL_STORAGE_KEY = 'agenda_telefonica';
-/**
-* Guarda la lista de contactos en el LocalStorage
-* @param Array} contactos  Lista de contactos a guardar
-*/
+/* =========================
+   CONTACTOS
+========================= */
+const CONTACTS_STORAGE_KEY = "agenda_telefonica";
+
 function saveContactsToStorage(contactos) {
     localStorage.setItem(
-        LOCAL_STORAGE_KEY, 
+        CONTACTS_STORAGE_KEY,
         JSON.stringify(contactos)
     );
 }
-/**
-* Obtiene la lista de contactos desde el LocalStorage
-* @returns Array} Lista de contactos, o array vacío si no hay datos
-*/
+
 function getContactsFromStorage() {
     return JSON.parse(
-        localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
+        localStorage.getItem(CONTACTS_STORAGE_KEY)
+    ) || [];
 }
-// Exportar las funciones para su uso en otros módulos
-export { LOCAL_STORAGE_KEY, getContactsFromStorage, saveContactsToStorage };
+
+/* =========================
+   TAREAS
+========================= */
+const TASKS_STORAGE_KEY = "lista_tareas";
+
+function saveTasksToStorage(tareas) {
+    localStorage.setItem(
+        TASKS_STORAGE_KEY,
+        JSON.stringify(tareas)
+    );
+}
+
+function getTasksFromStorage() {
+    return JSON.parse(
+        localStorage.getItem(TASKS_STORAGE_KEY)
+    ) || [];
+}
+
+export {
+    saveContactsToStorage,
+    getContactsFromStorage,
+    saveTasksToStorage,
+    getTasksFromStorage
+};
