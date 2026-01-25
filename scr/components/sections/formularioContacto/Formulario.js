@@ -32,8 +32,10 @@ let Formulario = () =>{
         e.preventDefault();
 
         let contacto = {
+            id : Date.now(),
             nombre: nombre.value,
-            telefono: telefono.value
+            telefono: telefono.value,
+            favorito: false
         };
         console.log(contacto);
         ContactList.push(contacto);

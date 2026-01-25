@@ -13,7 +13,6 @@
     width: 45%;
 }
 
-/* ====== TÍTULO ====== */
 .formulario h2 {
     margin: 0;
     text-align: center;
@@ -26,7 +25,6 @@
     text-shadow: 0 0 6px rgba(255, 77, 77, 0.35);
 }
 
-/* ====== INPUTS ====== */
 .formulario input {
     padding: 10px;
     font-size: 1rem;
@@ -42,13 +40,11 @@
     color: #777;
 }
 
-/* ====== FOCUS ====== */
 .formulario input:focus {
     border-color: #ff5252;
     box-shadow: 0 0 0 1px rgba(255, 82, 82, 0.4);
 }
 
-/* ====== BOTÓN ====== */
 .formulario button {
     padding: 10px;
     font-size: 1rem;
@@ -66,13 +62,11 @@
     justify-content: center;
 }
 
-/* ====== HOVER ====== */
 .formulario button:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 16px rgba(198, 40, 40, 0.7);
 }
 
-/* ====== ACTIVE ====== */
 .formulario button:active {
     transform: translateY(1px);
     box-shadow: 0 0 6px rgba(198, 40, 40, 0.9);
@@ -82,7 +76,6 @@
    FORMULARIO TAREA
 ========================= */
 
-/* TEXTAREA */
 .formulario textarea {
     padding: 10px;
     font-size: 1rem;

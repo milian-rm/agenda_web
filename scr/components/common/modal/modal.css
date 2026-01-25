@@ -1,4 +1,3 @@
-/* Fondo oscuro */
 .modal_fondo {
     position: fixed;
     inset: 0;
@@ -9,7 +8,6 @@
     z-index: 1000;
 }
 
-/* Caja del modal */
 .modal {
     background-color: #fff;
     width: 90%;
@@ -20,7 +18,6 @@
     animation: aparecer 0.25s ease;
 }
 
-/* Animación */
 @keyframes aparecer {
     from {
         transform: scale(0.9);
@@ -32,7 +29,6 @@
     }
 }
 
-/* Botón cerrar */
 .modal_cerrar {
     position: absolute;
     top: 10px;
@@ -43,7 +39,6 @@
     cursor: pointer;
 }
 
-/* Contenido interno */
 .modal_contenido {
     margin-top: 20px;
 }

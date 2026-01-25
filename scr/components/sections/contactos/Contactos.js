@@ -12,8 +12,7 @@ let Contactos = () => {
     sectionContactos.appendChild(h2);
 
     ContactList.forEach((contact) => {
-        sectionContactos.appendChild(ItemContacto("user",
-            contact.nombre, contact.telefono));
+        sectionContactos.appendChild(ItemContacto(contact))
     });
 
     return sectionContactos;

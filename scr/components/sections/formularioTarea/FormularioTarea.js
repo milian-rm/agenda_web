@@ -37,7 +37,7 @@ let FormularioTarea = () => {
 
     sectionFormulario.addEventListener("submit", (e) => {
         e.preventDefault();
-
+        //Envío un objeto tarea
         let tarea = {
             id : Date.now(),
             titulo: titulo.value,

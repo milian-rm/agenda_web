@@ -18,7 +18,10 @@ let Tareas = () => {
     };
 
     /*Ordenamos con sort, con respecto al valor de antes,
-    sort va comparando los pares de la lista de Tareas */
+    sort va comparando los pares de la lista de Tareas,
+    si el resultado es <0 entonces a va antes que b
+    si el resultado es >0 b va antes que a
+    si es 0 no cambia */
     const tareasOrdenadas = TaskList.sort(
         (a, b) => prioridadOrden[a.prioridad] - prioridadOrden[b.prioridad]
     );

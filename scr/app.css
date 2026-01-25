@@ -5,9 +5,6 @@
     box-sizing: border-box;
 }
 
-
-
-
 #app{
     width: 100vw;
     height: 100vh;
@@ -29,12 +26,10 @@
     border-bottom: 1px solid #2a2a2a;
 }
 
-/* ====== BOTONES DEL MENÚ ====== */
 #nav > div {
     width: 100%;
 }
 
-/* ====== CONTAINER PRINCIPAL ====== */
 #container {
     flex: 1;
     width: 100%;
@@ -52,9 +47,30 @@
     );
 }
 
-/* ====== TRANSICIÓN AL CAMBIAR SECCIÓN ====== */
 #container > * {
     animation: fadeSection 0.25s ease-in-out;
 }
+
+@media (max-width: 768px) {
+
+    #app {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    #nav {
+        flex-direction: column;   
+        width: 100%;
+    }
+
+    #nav > div {
+        width: 100%;
+    }
+
+    #container {
+        padding: 10px;
+    }
+}
+
 
 
