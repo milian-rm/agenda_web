@@ -49,6 +49,16 @@ let FormularioTarea = () => {
         console.log(tarea);
         TaskList.push(tarea);
         saveTasksToStorage(TaskList);
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Tarea Creada',
+            text: `Se creó ${tarea.titulo} correctamente`,
+            confirmButton: 'Ok',
+            confirmButtonColor: '#8b0000',
+            background: 'linear-gradient(180deg, #151515, #0d0d0d)',           
+            color: '#ffffff'
+        });
     });
 
     return sectionFormulario;

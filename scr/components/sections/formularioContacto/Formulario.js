@@ -1,4 +1,3 @@
-
 import { ContactList } from "../storage/db.js"
 import { saveContactsToStorage } from "../storage/storage.js";
 
@@ -40,6 +39,20 @@ let Formulario = () =>{
         console.log(contacto);
         ContactList.push(contacto);
         saveContactsToStorage(ContactList);
+
+        Swal.fire({
+        icon: 'success',
+        title: 'Contacto creado',
+        text: `Se agregó ${contacto.nombre} correctamente`,
+        confirmButton: 'Ok',
+        confirmButtonColor: '#8b0000',
+        background: 'linear-gradient(180deg, #151515, #0d0d0d)',           
+        color: '#ffffff'
+        });
+
+        // Limpiar inputs
+        nombre.value = "";
+        telefono.value = "";
     })
 
     let contacto = {

@@ -45,7 +45,7 @@ let ItemTarea = (tarea) => {
 
     /* recorro el array que cree antes, evaluando si alguno
     de las opciones es seleccionada */
-    prioridades.forEach(p => {  
+    prioridades.forEach(p => {
         let option = document.createElement("option");
         option.value = p;
         option.textContent = p;
@@ -104,11 +104,26 @@ let ItemTarea = (tarea) => {
     visual*/
     btnEliminar.addEventListener("click", () => {
         const index = TaskList.findIndex(t => t.id === id);
-        if (index > -1) {
-            TaskList.splice(index, 1);
-            saveTasksToStorage(TaskList);
-            div.remove();
-        }
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: 'Este contacto se eliminará permanentemente',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Sí, eliminar',
+            cancelButtonText: 'Cancelar',
+            confirmButtonColor: '#8b0000',
+            cancelButtonColor: '#8b7e7e',
+            background: 'linear-gradient(180deg, #151515, #0d0d0d)',
+            color: '#ffffff'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                if (index > -1) {
+                    TaskList.splice(index, 1);
+                    saveTasksToStorage(TaskList);
+                    div.remove();
+                }
+            }
+        });
     });
 
     /*Los botones van a ir dentro de un div, para poder
@@ -120,11 +135,10 @@ let ItemTarea = (tarea) => {
     acciones.appendChild(btnEditar);
     acciones.appendChild(btnEliminar);
 
-    div.appendChild(acciones);
-
     div.appendChild(checkbox);
     div.appendChild(contenedorTexto);
     div.appendChild(selectPrioridad);
+    div.appendChild(acciones);
 
     return div;
 };

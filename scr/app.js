@@ -70,12 +70,6 @@ nav.appendChild(Button(
     }
 ));
 
-//recargar la vista de Favoritos
-document.addEventListener("favoritos-updated", () => {
-    container.innerHTML = "";
-    container.appendChild(Favoritos());
-});
-
 // Section Container
 let container = document.getElementById("container");
 container.appendChild(Contactos());

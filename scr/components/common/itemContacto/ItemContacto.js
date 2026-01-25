@@ -33,6 +33,8 @@ let ItemContacto = (contacto) => {
     checkbox.addEventListener("change", () => {
         contacto.favorito = checkbox.checked;
         saveContactsToStorage(ContactList);
+        //Cambio para refrescar favoritos
+        document.dispatchEvent(new Event("favoritos-updated"));
     });
 
     let acciones = document.createElement("div");
@@ -65,15 +67,35 @@ let ItemContacto = (contacto) => {
     borrar.alt = "Eliminar";
 
     btnEliminar.appendChild(borrar);
-
     btnEliminar.addEventListener("click", () => {
         const index = ContactList.findIndex(c => c.id === id);
-        if (index > -1) {
-            ContactList.splice(index, 1);
-            saveContactsToStorage(ContactList);
-            div.remove();
-        }
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: 'Este contacto se eliminará permanentemente',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Sí, eliminar',
+            cancelButtonText: 'Cancelar',
+            confirmButtonColor: '#8b0000',
+            cancelButtonColor: '#8b7e7e',
+            background: 'linear-gradient(180deg, #151515, #0d0d0d)',
+            color: '#ffffff'
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                if (index > -1) {
+                    ContactList.splice(index, 1);
+                    saveContactsToStorage(ContactList);
+                    div.remove();
+                }
+
+
+            }
+        });
     });
+
+
+
 
     acciones.appendChild(btnEditar);
     acciones.appendChild(btnEliminar);

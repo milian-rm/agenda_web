@@ -49,6 +49,16 @@ let FormularioEditarTarea = (tarea, onClose) => {
 
         saveTasksToStorage(TaskList);
         if (onClose) onClose();
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Tarea Editada Exitosamente',
+            text: `Se editó ${tarea.titulo} correctamente`,
+            confirmButton: 'Ok',
+            confirmButtonColor: '#8b0000',
+            background: 'linear-gradient(180deg, #151515, #0d0d0d)',           
+            color: '#ffffff'
+        });
     });
 
     /* ===== ARMADO ===== */

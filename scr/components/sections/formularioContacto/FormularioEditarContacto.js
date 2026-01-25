@@ -30,6 +30,17 @@ let FormularioEditarContacto = (contacto, onClose) => {
 
         saveContactsToStorage(ContactList);
         if (onClose) onClose();
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Contacto Editado Exitosamente',
+            text: `Se editó ${contacto.nombre} correctamente`,
+            confirmButton: 'Ok',
+            confirmButtonColor: '#8b0000',
+            background: 'linear-gradient(180deg, #151515, #0d0d0d)',           
+            color: '#ffffff'
+        });
+
     });
 
     form.appendChild(h2);
