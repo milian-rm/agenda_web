@@ -126,3 +126,24 @@
     box-shadow: 0 0 0 1px rgba(255, 82, 82, 0.4);
 }
 
+.modal {
+    background: linear-gradient(180deg, #151515, #0d0d0d);
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    padding: 20px;
+    width: 90%;
+    max-width: 520px;
+    position: relative;
+}
+
+.modal_cerrar {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-size: 24px;
+    cursor: pointer;
+}

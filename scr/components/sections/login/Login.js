@@ -1,3 +1,6 @@
+import { Button } from "../../common/button/button";
+import { Contactos } from "../contactos/Contactos";
+
 let login = function () {
 
     let login = document.createElement("section");
@@ -15,6 +18,13 @@ let login = function () {
     
     let button = document.createElement("button")
     button.innerHTML = "Iniciar Sesión"
+    Button("Iniciar Sesion","login","",
+        function(){
+        container.innerHTML = "";
+        container.appendChild(Formulario());
+    });
+
+    
 
     login.appendChild(h3);
     login.appendChild(user);
@@ -23,5 +33,8 @@ let login = function () {
 
     return login;
 }
+
+let container = document.getElementById("container");
+
 
 export {login}

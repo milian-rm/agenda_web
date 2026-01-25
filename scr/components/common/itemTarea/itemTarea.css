@@ -211,3 +211,23 @@ select.alta {
     transform: scale(1.2);
 }
 
+/* Botón editar */
+.btn_editar {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #f4a261; /* color edición */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.btn_editar:hover {
+    transform: scale(1.2);
+    color: #e9c46a;
+}
+
+.acciones {
+    display: flex;
+    gap: 12px;
+}
+

@@ -49,6 +49,13 @@ nav.appendChild(Button(
     }
 ));
 
+nav.appendChild(Button(
+    "Favoritos",
+    "favorite",
+    "favorite",
+));
+
 // Section Container
 let container = document.getElementById("container");
 container.appendChild(Contactos());
+

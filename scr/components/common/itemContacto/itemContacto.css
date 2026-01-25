@@ -48,3 +48,24 @@
     opacity: 0.85;
     margin-left: auto;
 }
+
+.fav-checkbox {
+    display: none;
+}
+
+.fav-heart {
+    font-size: 22px;
+    cursor: pointer;
+    color: transparent;
+    -webkit-text-stroke: 2px red;
+    transition: all 0.2s ease;
+}
+
+.fav-heart::before {
+    content: "❤";
+}
+
+.fav-checkbox:checked + .fav-heart {
+    color: red;
+}
+

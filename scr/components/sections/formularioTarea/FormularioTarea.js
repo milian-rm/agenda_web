@@ -39,6 +39,7 @@ let FormularioTarea = () => {
         e.preventDefault();
 
         let tarea = {
+            id : Date.now(),
             titulo: titulo.value,
             descripcion: descripcion.value,
             prioridad: prioridad.value,
