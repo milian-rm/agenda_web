@@ -59,6 +59,10 @@ let FormularioTarea = () => {
             background: 'linear-gradient(180deg, #151515, #0d0d0d)',           
             color: '#ffffff'
         });
+
+        titulo.value = "";
+        descripcion.value = "";
+        prioridad.selectedIndex = 0;
     });
 
     return sectionFormulario;
