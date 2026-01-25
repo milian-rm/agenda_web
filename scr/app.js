@@ -64,7 +64,7 @@ nav.appendChild(Button(
     "logout",
     "logout",
     function () {
-        window.location.href = "./index.html";
+        window.location.href = "../index.html";
     }
 ));
 
