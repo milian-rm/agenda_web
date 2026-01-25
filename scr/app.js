@@ -4,8 +4,6 @@ import { Formulario } from "./components/sections/formularioContacto/Formulario.
 import { Tareas } from "./components/sections/tareas/Tareas.js";
 import { FormularioTarea } from "./components/sections/formularioTarea/FormularioTarea.js";
 import { Favoritos } from "./components/sections/contactos/Favoritos.js"
-import { Login } from "./components/sections/login/Login.js"
-
 // App
 let app = document.getElementById("app");
 
@@ -66,7 +64,7 @@ nav.appendChild(Button(
     "logout",
     "logout",
     function () {
-        window.location.href = "/index.html";
+        window.location.href = "./index.html";
     }
 ));
 

@@ -18,7 +18,7 @@ let Login = (onLogin) => {
     button.textContent = "Iniciar Sesión";
 
     button.addEventListener("click", () => {
-        window.location.href = "/scr/app.html";
+        window.location.href = "./scr/app.html";
     });
 
     section.appendChild(h3);
